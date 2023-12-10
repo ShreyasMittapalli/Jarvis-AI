@@ -82,20 +82,24 @@ if __name__ == '__main__':
             if f"Open {site[0]}".lower() in query.lower():
                 say(f"Opening {site[0]} sir...")
                 webbrowser.open(site[1])
-        if "open music" in query:
-            musicPath = "/Users/shreyas/Downloads/downfall-21371.mp3"
-            os.system(f"open {musicPath}")
+        if "open V.S Code" in query:
+            vscodePath = r"C:\Users\shrey\OneDrive\Desktop\Visual Studio Code.lnk"
+            os.system(f"start {vscodePath}")
 
         elif "the time" in query:
             hour = datetime.datetime.now().strftime("%H")
             min = datetime.datetime.now().strftime("%M")
-            say(f"Sir time is {hour} bajke {min} minutes")
+            say(f"Sir time is {hour} hours {min} minutes")
 
-        elif "open facetime".lower() in query.lower():
-            os.system(f"open /System/Applications/FaceTime.app")
+        elif "open zoom".lower() in query.lower():
+            zoomPath = r"C:\Users\shrey\OneDrive\Desktop\Zoom.lnk"
+            os.system(f"start {zoomPath}")
+            print("Zoom is open")
 
-        elif "open pass".lower() in query.lower():
-            os.system(f"open /Applications/Passky.app")
+        elif "open github desktop".lower() in query.lower():
+            githubPath = r"C:\Users\shrey\OneDrive\Desktop\GitHub Desktop.lnk"
+            os.system(f"start {githubPath}")
+            print("Opening github on Windows.")
 
         elif "Using artificial intelligence".lower() in query.lower():
             ai(prompt=query)
